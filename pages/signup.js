@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import Head from "next/head";
 import styles from '../styles/Signup.module.css';
 import axios from 'axios';
+import Link from 'next/link';
 
 export default function SignUp() {
     const router = useRouter()
@@ -68,7 +69,7 @@ export default function SignUp() {
                         <div className={styles.formHeader}>
                             <h1>Register</h1>
                             <h4>Become a QuizApp member today!</h4>
-                            <p>Let's get you all set up so you can take quiz and enhance your skills.</p>
+                            <p>Let&apos;s get you all set up so you can take quiz and enhance your skills.</p>
                         </div>
 
                         <div>
@@ -103,7 +104,7 @@ export default function SignUp() {
                                             <option value="MALE">Male</option>
                                             <option value="FEMALE">Female</option>
                                             <option value="OTHERS">Others</option>
-                                            <option value="NOT_DISCLOSE">Don't want to share</option>
+                                            <option value="NOT_DISCLOSE">Don&apos;t want to share</option>
                                         </select>
                                     </div>
 
@@ -126,7 +127,7 @@ export default function SignUp() {
 
                                 <div className={styles.termsBox}>
                                     <label><input type="checkbox" name="notifications" /> Yes, I want to receive quiz related mails.</label> <br />
-                                    <label><input type="checkbox" checked="checked" name="terms" /> I agree to all the <a href="#" style={{ color: "#0668E1" }}>Terms</a> and <a href="#" style={{ color: "#0668E1" }}>Privacy Policy</a>.</label>
+                                    <label><input type="checkbox" checked="checked" name="terms" /> I agree to all the <Link href="#" style={{ color: "#0668E1" }}>Terms</Link> and <Link href="#" style={{ color: "#0668E1" }}>Privacy Policy</Link>.</label>
                                 </div>
                                 <div></div>
 
@@ -136,7 +137,7 @@ export default function SignUp() {
                         </div>
 
                         <div>
-                            <p>Already have an account? <a href='/login' style={{ color: "#0668E1" }}><b>Login</b></a></p>
+                            <p>Already have an account? <Link href='/login' style={{ color: "#0668E1" }}><b>Login</b></Link></p>
                         </div>
 
 

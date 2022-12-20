@@ -3,7 +3,7 @@ import Head from "next/head";
 import styles from '../styles/Login.module.css'
 import axios from 'axios';
 
-export default function logIn() {
+export default function LogIn() {
     const router = useRouter()
 
     function onSubmit(event) {
@@ -83,7 +83,7 @@ export default function logIn() {
                         </div>
 
                         <div>
-                            <p>New User? Sign up <a href='/signup' style={{ color: "#0668E1" }}><b>here</b></a></p>
+                            <p>New User? Sign up <Link href='/signup' style={{ color: "#0668E1" }}><b>here</b></Link></p>
                         </div>
 
 

@@ -6,7 +6,7 @@ import { useState } from 'react';
 import styles from '../styles/TakeQuiz.module.css'
 import axios from 'axios';
 
-export default function takeQuiz() {
+export default function TakeQuiz() {
 
     const [hasQuizBegin, setHasQuizBegin] = React.useState(false);
     const [quiz, setQuiz] = React.useState({});
