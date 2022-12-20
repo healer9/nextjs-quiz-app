@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import styles from '../styles/CreateQuiz.module.css';
 import axios from 'axios';
 
-export default function createQuiz() {
+export default function CreateQuiz() {
     const [steps, setSteps] = React.useState(0);
     const [quiz, setQuiz] = React.useState({});
     const router = useRouter();
