@@ -93,11 +93,19 @@ export default function CreateQuiz() {
         onQuizQuestionSubmit(event);
 
         let url = "https://b1aa-103-212-147-171.in.ngrok.io/api/v1/quiz/create";
-        var myObj=quiz
+        var myObj=quiz;
+
+        let config = {
+            headers: {
+                "auth-token": localStorage.getItem("auth-token")
+            }
+        }
+        
 
         axios.post(
             url,
-            myObj
+            myObj,
+            config
         )
         .then((res) => {
             var temp = quiz;
@@ -121,9 +129,16 @@ export default function CreateQuiz() {
             "to": event.target.elements.members.value.split(",")
         }
 
+        let config = {
+            headers: {
+                "auth-token": localStorage.getItem("auth-token")
+            }
+        };
+
         axios.post(
             url,
-            myObj
+            myObj,
+            config
         )
         .then((res) => {
             window.alert("Users Invited Successfully!")

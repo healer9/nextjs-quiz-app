@@ -58,6 +58,11 @@ export default function TakeQuiz() {
         setLoading(true)
 
         let url = "https://dd5c-103-212-147-171.in.ngrok.io/api/v1/quiz/start";
+        let config = {
+            headers: {
+                "auth-token": localStorage.getItem("auth-token")
+            }
+        }
         var myObj={
             "quizId": quiz.quizId,
             "email": "pawankm97@gmail.com"
@@ -65,7 +70,8 @@ export default function TakeQuiz() {
 
         axios.post(
             url,
-            myObj
+            myObj,
+            config
         )
         .then((res) => {
             setHasQuizBegin(true);
@@ -96,6 +102,13 @@ export default function TakeQuiz() {
         setAnswers([]);
         setLoading(true);
         let url = "https://dd5c-103-212-147-171.in.ngrok.io/api/v1/quiz/next-question";
+
+        let config = {
+            headers: {
+                "auth-token": localStorage.getItem("auth-token")
+            }
+        };
+
         var myObj={
             "quizId": quiz.quizId,
             "questionNumber": question.difficulty,
@@ -105,7 +118,8 @@ export default function TakeQuiz() {
 
         axios.post(
             url,
-            myObj
+            myObj,
+            config
         )
         .then((res) => {
             if(res.data.result || res.data.message){
