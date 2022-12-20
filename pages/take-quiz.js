@@ -18,11 +18,18 @@ export default function TakeQuiz() {
     
 
     useEffect(() => {
+        
+        let token = localStorage.getItem("auth-token");
+        if(!token){
+            window.alert("Please log in to continue");
+            router.push("/login");
+        }
+
         setLoading(true)
         let url = "https://dd5c-103-212-147-171.in.ngrok.io/api/v1/quiz/details";
         let config = {
             headers: {
-                "auth-token": localStorage.getItem("auth-token")
+                "auth-token": token
             }
         }
         let myObj = {

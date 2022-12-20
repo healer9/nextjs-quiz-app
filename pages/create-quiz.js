@@ -9,6 +9,14 @@ export default function CreateQuiz() {
     const [steps, setSteps] = React.useState(0);
     const [quiz, setQuiz] = React.useState({});
     const router = useRouter();
+
+    useEffect(() => {
+        let token = localStorage.getItem("auth-token");
+        if(!token){
+            window.alert("Please log in to continue");
+            router.push("/login");
+        }
+    }, [])
     
     function onQuizDetailsSubmit(event) {
         event.preventDefault();
