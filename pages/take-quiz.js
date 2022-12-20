@@ -246,7 +246,7 @@ export default function TakeQuiz() {
                                 {
                                     question.options ? question.options.map(x => {
                                         return (
-                                            <div>
+                                            <div key={Math.random()}>
                                                 <input type="checkbox" name={x} id={x} value={x} key={Math.random()} onChange={() => handleAnswerSelection(x)} /> <label for={x}><b> {x}</b></label>
                                             </div>
                                         )

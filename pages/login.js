@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import Head from "next/head";
 import styles from '../styles/Login.module.css'
 import axios from 'axios';
+import Link from 'next/link';
 
 export default function LogIn() {
     const router = useRouter()
