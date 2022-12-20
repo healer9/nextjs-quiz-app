@@ -26,7 +26,7 @@ export default function SignUp() {
             return;
         }
 
-        let url = "https://b1aa-103-212-147-171.in.ngrok.io/api/v1/users/signup";
+        let url = "localhost:3001/api/v1/users/signup";
 
         axios.post(
             url,

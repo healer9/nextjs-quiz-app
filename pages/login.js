@@ -15,7 +15,7 @@ export default function LogIn() {
             "remember": event.target.elements.remember.value,
         };
 
-        let url = "https://b1aa-103-212-147-171.in.ngrok.io/api/v1/users/login";
+        let url = "localhost:3001/api/v1/users/login";
         axios.post(
             url,
             myObj

@@ -100,7 +100,7 @@ export default function CreateQuiz() {
 
         onQuizQuestionSubmit(event);
 
-        let url = "https://b1aa-103-212-147-171.in.ngrok.io/api/v1/quiz/create";
+        let url = "localhost:3001/api/v1/quiz/create";
         var myObj=quiz;
 
         let config = {
@@ -130,7 +130,7 @@ export default function CreateQuiz() {
 
     function onInvitation(event) {
 
-        let url = "https://b1aa-103-212-147-171.in.ngrok.io/api/v1/users/invite";
+        let url = "localhost:3001/api/v1/users/invite";
 
         var myObj={
             "quizId": quiz.quizId,

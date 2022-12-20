@@ -26,7 +26,7 @@ export default function TakeQuiz() {
         }
 
         setLoading(true)
-        let url = "https://dd5c-103-212-147-171.in.ngrok.io/api/v1/quiz/details";
+        let url = "localhost:3001/api/v1/quiz/details";
         let config = {
             headers: {
                 "auth-token": token
@@ -64,7 +64,7 @@ export default function TakeQuiz() {
         event.preventDefault();
         setLoading(true)
 
-        let url = "https://dd5c-103-212-147-171.in.ngrok.io/api/v1/quiz/start";
+        let url = "localhost:3001/api/v1/quiz/start";
         let config = {
             headers: {
                 "auth-token": localStorage.getItem("auth-token")
@@ -108,7 +108,7 @@ export default function TakeQuiz() {
         console.log(event.target.elements)
         setAnswers([]);
         setLoading(true);
-        let url = "https://dd5c-103-212-147-171.in.ngrok.io/api/v1/quiz/next-question";
+        let url = "localhost:3001/api/v1/quiz/next-question";
 
         let config = {
             headers: {
