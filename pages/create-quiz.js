@@ -100,7 +100,7 @@ export default function CreateQuiz() {
 
         onQuizQuestionSubmit(event);
 
-        let url = "localhost:3001/api/v1/quiz/create";
+        let url = "https://nestjs-quiz-app.vercel.app/api/v1/quiz/create";
         var myObj=quiz;
 
         let config = {
@@ -130,7 +130,7 @@ export default function CreateQuiz() {
 
     function onInvitation(event) {
 
-        let url = "localhost:3001/api/v1/users/invite";
+        let url = "https://nestjs-quiz-app.vercel.app/api/v1/users/invite";
 
         var myObj={
             "quizId": quiz.quizId,

@@ -15,7 +15,7 @@ export default function LogIn() {
             "remember": event.target.elements.remember.value,
         };
 
-        let url = "localhost:3001/api/v1/users/login";
+        let url = "https://nestjs-quiz-app.vercel.app/api/v1/users/login";
         axios.post(
             url,
             myObj

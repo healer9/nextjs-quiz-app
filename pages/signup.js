@@ -26,7 +26,7 @@ export default function SignUp() {
             return;
         }
 
-        let url = "localhost:3001/api/v1/users/signup";
+        let url = "https://nestjs-quiz-app.vercel.app/api/v1/users/signup";
 
         axios.post(
             url,
